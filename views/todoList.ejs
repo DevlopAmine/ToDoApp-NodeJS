@@ -1,0 +1,28 @@
+
+<html>
+<body>
+<h1>My todoList</h1>
+
+<form action = "http://localhost:8080/resp" method = "POST">
+    <label>Que dois-je faire? </label>
+    <input type = "text" name = "option">  <br>
+    <input type = "submit" value = "Valider">
+</form>
+
+
+<% if(options.length != 0)
+    {
+    for(var i = 0 ; i < options.length ; i++) {
+    %>
+    <table>
+    <td><input type = "button" name = "delOpt" value="X"></td>
+    <td><label><%= options[i] %></label></td>
+    </table>
+
+
+    <% }
+
+    }    %>
+
+</body>
+</html>
